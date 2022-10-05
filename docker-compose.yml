@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nginx-web:
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/usr/share/nginx/html
+    ports:
+      - "8080:80"
